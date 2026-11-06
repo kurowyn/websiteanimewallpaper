@@ -1,11 +1,9 @@
 // ==UserScript==
-// @name         GitHub Anime Background Image
+// @name         Anime Background Image For Every Website
 // @version      2026-11-06
-// @namespace    https://github.com/
-// @description  Makes GitHub a little more enjoyable, by making it have an Anime background image. Currently a WIP!
+// @description  Makes browsing a little more enjoyable, by making the websites you visit have an Anime background image. Currently a WIP!
 // @author       Kurowyn
-// @match        https://github.com/*
-// @icon         https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg
+// @match        https://*/*
 // @run-at       document-idle
 // @grant        none
 // ==/UserScript==
@@ -66,12 +64,10 @@
 </style>
 </div>
 `
-
-    console.log('Hi! Should be printing on GitHub...')
-
     document.body.insertAdjacentHTML('afterbegin', customBackgroundImageHTML)
 
     document.getElementById('backgroundToggleButton').addEventListener('click', () => {
+        // You can change this to whatever you want!
         let backgroundURL = 'https://raw.githubusercontent.com/ThePrimeagen/anime/refs/heads/master/lose-control.png'
 
         let isBackgroundOn = document.getElementById('customBackground').style.getPropertyValue('--bg-url') !== ''
