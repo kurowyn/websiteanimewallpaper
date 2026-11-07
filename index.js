@@ -68,7 +68,7 @@
 
     document.getElementById('backgroundToggleButton').addEventListener('click', () => {
         // You can change this to whatever you want!
-        let backgroundURL = 'https://raw.githubusercontent.com/ThePrimeagen/anime/refs/heads/master/lose-control.png'
+        let backgroundURL = ''
 
         let isBackgroundOn = document.getElementById('customBackground').style.getPropertyValue('--bg-url') !== ''
 
